@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -e
+
+echo "59 23 * * * bash /home/vagrant/scripts/reposync.sh" > /tmp/crontab
+crontab -u vagrant /tmp/crontab
+rm /tmp/crontab
